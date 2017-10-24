@@ -1,12 +1,14 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Agenda {
 
-    public ArrayList<PersonaAgenda> lista = new ArrayList<>();
+    private ArrayList<PersonaAgenda> lista = new ArrayList<>();
 
     public void add(PersonaAgenda per) {
         lista.add(per);
     }
 
+    public ArrayList<PersonaAgenda> getLista() {
+        return lista;
+    }
 }
