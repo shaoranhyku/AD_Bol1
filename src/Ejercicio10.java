@@ -21,7 +21,7 @@ public class Ejercicio10 {
             System.out.println("FIN DE LECTURA.");
         }
         myReader.close();
-        
+
         XStream xstream = new XStream();
         xstream.alias("Lista de contactos", Agenda.class);
         xstream.alias("Contacto", PersonaAgenda.class);

@@ -1,0 +1,29 @@
+<Lista de contactos>
+  <Contacto>
+    <name>Alejandro Segura</name>
+    <phoneNumber>615101488</phoneNumber>
+    <address>Vicente Alexandre</address>
+    <postalCode>11204</postalCode>
+    <birthdate>1997-01-06</birthdate>
+    <hasDebts>true</hasDebts>
+    <debts>57.32</debts>
+  </Contacto>
+  <Contacto>
+    <name>Francisco Javier Florín</name>
+    <phoneNumber>636932813</phoneNumber>
+    <address>Avenida Vistamar</address>
+    <postalCode>0</postalCode>
+    <birthdate>1998-03-26</birthdate>
+    <hasDebts>false</hasDebts>
+    <debts>0.0</debts>
+  </Contacto>
+  <Contacto>
+    <name>Francisco Javier Florín</name>
+    <phoneNumber>636932813</phoneNumber>
+    <address>Avenida Vistamar</address>
+    <postalCode>0</postalCode>
+    <birthdate>1998-03-26</birthdate>
+    <hasDebts>false</hasDebts>
+    <debts>0.0</debts>
+  </Contacto>
+</Lista de contactos>
