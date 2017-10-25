@@ -29,7 +29,7 @@ public class Ejercicio08 {
         double debts = 57.32;
 
         //Contanto 2.
-        String name2 ="qwqwertyuiopertyuiopoiuytrewqé";
+        String name2 ="Francisco Javier Florín";
         int phoneNumber2 = 636932813;
         String address2 = "Avenida Vistamar";
         int postalCode2 = 00000;

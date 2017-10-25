@@ -1,4 +1,4 @@
-<Lista de contactos>
+<ListaContactos>
   <Contacto>
     <name>Alejandro Segura</name>
     <phoneNumber>615101488</phoneNumber>
@@ -17,13 +17,4 @@
     <hasDebts>false</hasDebts>
     <debts>0.0</debts>
   </Contacto>
-  <Contacto>
-    <name>Francisco Javier Florín</name>
-    <phoneNumber>636932813</phoneNumber>
-    <address>Avenida Vistamar</address>
-    <postalCode>0</postalCode>
-    <birthdate>1998-03-26</birthdate>
-    <hasDebts>false</hasDebts>
-    <debts>0.0</debts>
-  </Contacto>
-</Lista de contactos>
+</ListaContactos>

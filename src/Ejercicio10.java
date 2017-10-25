@@ -23,10 +23,12 @@ public class Ejercicio10 {
         myReader.close();
 
         XStream xstream = new XStream();
-        xstream.alias("Lista de contactos", Agenda.class);
+        xstream.alias("ListaContactos", Agenda.class);
         xstream.alias("Contacto", PersonaAgenda.class);
         xstream.addImplicitCollection(Agenda.class, "lista");
         xstream.toXML(agenda, new FileOutputStream("Ejercicio10.xml"));
+
+        System.out.println("Proceso terminado.");
 
     }
 }
