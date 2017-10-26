@@ -21,7 +21,7 @@ public class Ejercicio09 {
     public static void main(String[] args) throws IOException {
 
         int i = 1, opcion, posicionVacia;
-        boolean terminado = false, deudas;
+        boolean terminado = false;
         DataInputStream binaryReader = null;
         RandomAccessFile randomFile = null;
         StringBuffer buffer;
@@ -42,7 +42,6 @@ public class Ejercicio09 {
                 //Identificador 4 bytes
                 randomFile.writeInt(i);
                 //Nombre 60 bytes TOTAL 64 bytes
-
                 buffer.setLength(30);
                 randomFile.writeChars(buffer.toString());
                 //Numero de teléfono 4 bytes TOTAL 68 bytes
@@ -156,8 +155,6 @@ public class Ejercicio09 {
                     } else {
                         System.out.println("No existen contactos.\n");
                     }
-
-
                     break;
                 case 5:
                     if (randomFile.length() > 0) {
@@ -255,16 +252,17 @@ public class Ejercicio09 {
         addUser(randomFile, (int) randomFile.length());
     }
 
-    private static void addUser(RandomAccessFile randomFile, int posicion) throws IOException {
+    private static void addUser(RandomAccessFile randomFile, int posicionPuntero) throws IOException {
         StringBuffer buffer;
         int anio;
         int mes;
         int dia;
         boolean deudas;
 
-        randomFile.seek(posicion);
+        randomFile.seek(posicionPuntero);
 
-        randomFile.writeInt((int) Math.floor((randomFile.getFilePointer() / LONGITUD_CONTACTO)) + 1);
+        //Tenia un Math.floor
+        randomFile.writeInt((int) (randomFile.getFilePointer() / LONGITUD_CONTACTO) + 1);
 
         System.out.print("Introduce el nombre (máximo 30 caracteres): ");
         buffer = new StringBuffer(Teclado.leerString());
@@ -372,7 +370,8 @@ public class Ejercicio09 {
                 //Una vez comprobado, vuelvo a la posición correspondiente y comienzo a copiar.
                 randomFile.seek(aux);
 
-                cleanRandomFile.writeInt((int) Math.floor((cleanRandomFile.getFilePointer() / LONGITUD_CONTACTO)) + 1);
+                // Tenia un Math.floor
+                cleanRandomFile.writeInt((int) (cleanRandomFile.getFilePointer() / LONGITUD_CONTACTO) + 1);
                 randomFile.readInt();
 
                 for (int j = 0; j < 30; j++) {

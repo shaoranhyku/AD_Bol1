@@ -18,7 +18,7 @@ public class Ejercicio10 {
                 agenda.add((PersonaAgenda) myReader.readObject());
             }
         } catch (EOFException eo) {
-            System.out.println("FIN DE LECTURA.");
+
         }
         myReader.close();
 

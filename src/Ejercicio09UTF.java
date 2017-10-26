@@ -401,13 +401,16 @@ public class Ejercicio09UTF {
 
     public static String padRight(String s, int n) {
         try {
+            //Mientras que el tamaño en bytes de la cadena supere la longitud deseada
             while(s.getBytes("UTF-8").length>n){
-                s=s.substring(0,s.length()-1);
+                s=s.substring(0,s.length()-1); //Le quito el último carácter
             }
+            //Calculo el tamaño de la cadena en caracteres
             n=n-(s.getBytes("UTF-8").length-s.length());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        //Formo la cadena con un tamaño permitido.
         String formarString = String.format("%-" + n + "s", s);
         return formarString;
     }
