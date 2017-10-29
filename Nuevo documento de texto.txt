@@ -1,0 +1,23 @@
+<?xml version="l.0" encoding='UTF-8'?>
+<xsl:stylesheet version="l.0" xmlns:xsl="http://www.w3.org/l999/XSL/Transform">
+	<xsl:template match= '/'>
+		<html><xsl:apply-templates /></html>
+	</xsl:template>
+	<xsl:template match='ListaContactos'>
+		<head><title>LISTADO DE ALUMNOS</title></head>
+		<body>
+			<hl>LISTA DE ALUMNOS</hl>
+			<table border='l'>
+				<tr><th>Nombre</th><th>Número de teléfono</th><th>Dirección</th><th>¿Deudas?</th><th>Cantidad</th></tr>
+				<xsl:apply-templates select='alumno 1 />
+			</table>
+		</body>
+	</xsl:template>
+	<xsl:template match='Contacto'>
+		<tr><xsl:apply-templates /></tr>
+	</xsl:template>
+
+	<xsl:template match='name|phoneNumber|address|hasDebts|debts'>
+		<td><xsl:apply-templates /></td>
+	</xsl: template>
+</xsl:stylesheet>
