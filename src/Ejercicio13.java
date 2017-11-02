@@ -14,8 +14,6 @@ public class Ejercicio13 {
         try {
             Transformer transformer= TransformerFactory.newInstance().newTransformer(estilo);
             transformer.transform(datos,resultado);
-        } catch (TransformerConfigurationException e) {
-            e.printStackTrace();
         } catch (TransformerException e) {
             e.printStackTrace();
         }
