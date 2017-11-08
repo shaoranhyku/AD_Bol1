@@ -12,7 +12,6 @@ public class Ejercicio14 {
 
         Gson gson = new Gson();
         BufferedWriter writer = new BufferedWriter(new FileWriter("Ejercicio14.json"));
-
         Agenda agenda;
 
         XStream xstream = new XStream();

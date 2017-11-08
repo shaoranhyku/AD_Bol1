@@ -1,0 +1,21 @@
+*******************************************************************************
+                                 AGENDA TELEFÓNICA
+*******************************************************************************
+	Nombre:              Alejandro Segura
+	Teléfono:            615101488
+	Dirección:           Vicente Alexandre
+	Código Postal:       11204
+	Fecha de nacimiento: 1997-01-06
+	Le debo dinero:      Si
+	Cuánto:              57.32
+*******************************************************************************
+	Nombre:              Francisco Javier Florín
+	Teléfono:            636932813
+	Dirección:           Avenida Vistamar
+	Código Postal:       0
+	Fecha de nacimiento: 1998-03-26
+	Le debo dinero:      No
+	Cuánto:              0.0
+*******************************************************************************
+                       FIN DE LA AGENDA TELEFÓNICA
+*******************************************************************************
