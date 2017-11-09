@@ -36,7 +36,7 @@ public class Ejercicio15 {
         BufferedReader reader = new BufferedReader(new FileReader("Ejercicio14.json"));
         Agenda agenda;
 
-        agenda=gson.fromJson(reader.readLine(),Agenda.class);
+        agenda=gson.fromJson(reader,Agenda.class);
         reader.close();
 
         //Escribo la cabecera
