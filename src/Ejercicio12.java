@@ -4,7 +4,6 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.helpers.XMLReaderFactory;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -35,7 +34,7 @@ class GestionContenido extends DefaultHandler {
     public GestionContenido(String destino) {
         super();
         try {
-            writer=new BufferedWriter(new FileWriter(destino));
+            writer = new BufferedWriter(new FileWriter(destino));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,7 +49,6 @@ class GestionContenido extends DefaultHandler {
         }
     }
 
-
     public void endDocument() {
         try {
             writer.close();
@@ -60,23 +58,23 @@ class GestionContenido extends DefaultHandler {
     }
 
     public void startElement(String uri, String nombre, String nombreC, Attributes atts) {
-        if(nombre.equals("Contacto")){
-            contacto="";
-        }else if(nombre.equals("phoneNumber")){
-            contacto+=String.format(" %s: %s ",nombre,atts.getValue(0));
-        }else if(nombre.equals("address")){
-            contacto+=String.format(" %s: %s %s: ",atts.getQName(0), atts.getValue(0),nombre);
-        }else if(nombre.equals("debts")){
-            contacto+=String.format(" %s: %s ",nombre,atts.getValue(0));
-        }else if(nombre.equals("name")){
-            contacto+=String.format("%s: ",nombre);
-        }else{
-            contacto+=String.format(" %s: ",nombre);
+        if (nombre.equals("Contacto")) {
+            contacto = "";
+        } else if (nombre.equals("phoneNumber")) {
+            contacto += String.format(" %s: %s ", nombre, atts.getValue(0));
+        } else if (nombre.equals("address")) {
+            contacto += String.format(" %s: %s %s: ", atts.getQName(0), atts.getValue(0), nombre);
+        } else if (nombre.equals("debts")) {
+            contacto += String.format(" %s: %s ", nombre, atts.getValue(0));
+        } else if (nombre.equals("name")) {
+            contacto += String.format("%s: ", nombre);
+        } else {
+            contacto += String.format(" %s: ", nombre);
         }
     }
 
     public void endElement(String uri, String nombre, String nombreC) {
-        if(nombre.equals("Contacto")){
+        if (nombre.equals("Contacto")) {
             try {
                 writer.write(contacto);
                 writer.newLine();
@@ -89,8 +87,7 @@ class GestionContenido extends DefaultHandler {
     public void characters(char[] ch, int inicio, int longitud) throws SAXException {
         String car = new String(ch, inicio, longitud);
         car = car.replaceAll("[\t\n] ", "");
-        car=car.trim();
-        contacto+=String.format("%s",car);
-
+        car = car.trim();
+        contacto += String.format("%s", car);
     }
 }
