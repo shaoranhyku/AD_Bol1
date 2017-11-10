@@ -4,6 +4,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.helpers.XMLReaderFactory;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -61,15 +62,15 @@ class GestionContenido extends DefaultHandler {
         if (nombre.equals("Contacto")) {
             contacto = "";
         } else if (nombre.equals("phoneNumber")) {
-            contacto += String.format(" %s: %s ", nombre, atts.getValue(0));
+            contacto += String.format(" %s: %s ", capitalizer(nombre), atts.getValue(0));
         } else if (nombre.equals("address")) {
-            contacto += String.format(" %s: %s %s: ", atts.getQName(0), atts.getValue(0), nombre);
+            contacto += String.format(" %s: %s %s: ", capitalizer(atts.getQName(0)), atts.getValue(0), capitalizer(nombre));
         } else if (nombre.equals("debts")) {
-            contacto += String.format(" %s: %s ", nombre, atts.getValue(0));
+            contacto += String.format(" %s: %s ", capitalizer(nombre), atts.getValue(0));
         } else if (nombre.equals("name")) {
-            contacto += String.format("%s: ", nombre);
+            contacto += String.format("%s: ", capitalizer(nombre));
         } else {
-            contacto += String.format(" %s: ", nombre);
+            contacto += String.format(" %s: ", capitalizer(nombre));
         }
     }
 
@@ -89,5 +90,17 @@ class GestionContenido extends DefaultHandler {
         car = car.replaceAll("[\t\n] ", "");
         car = car.trim();
         contacto += String.format("%s", car);
+    }
+
+    public static String capitalizer(final String texto) {
+
+        String[] palavras = texto.split(" ");
+        StringBuilder sb = new StringBuilder();
+
+        for (String palavra : palavras) {
+            sb.append(Character.toUpperCase(palavra.charAt(0))).append(palavra.substring(1).toLowerCase()).append(" ");
+        }
+
+        return sb.toString().trim();
     }
 }

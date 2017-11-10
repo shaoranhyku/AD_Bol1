@@ -1,3 +1,3 @@
 Contact List:
-name: Alejandro Segura phoneNumber: +34 615101488 locality: Algeciras address: Vicente Alexandre postalCode: 11204 birthdate: 1997-01-06 hasDebts: true debts: EUR 57.32
-name: Francisco Javier Florín phoneNumber: +38 636932813 locality: Cadiz address: Avenida Vistamar postalCode: 0 birthdate: 1998-03-26 hasDebts: false debts: USD 0.0
+Name: Alejandro Segura Phonenumber: +34 615101488 Locality: Algeciras Address: Vicente Alexandre Postalcode: 11204 Birthdate: 1997-01-06 Hasdebts: true Debts: EUR 57.32
+Name: Francisco Javier Florín Phonenumber: +38 636932813 Locality: Cadiz Address: Avenida Vistamar Postalcode: 0 Birthdate: 1998-03-26 Hasdebts: false Debts: USD 0.0
