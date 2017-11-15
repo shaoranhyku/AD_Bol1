@@ -1,0 +1,4 @@
+[
+    {"name":"Alejandro Segura","phoneNumber":615101488,"address":"Prueba","postalCode":11204,"hasDebts":true,"debts":57.32},
+    {"name":"Francisco Javier Florín","phoneNumber":636932813,"address":"No","postalCode":11203,"hasDebts":true,"debts":0.0},
+    {"name":"Alumno3","phoneNumber":636932813,"address":"Prueba","postalCode":11204,"hasDebts":true,"debts":16.89}]
